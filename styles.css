@@ -73,24 +73,28 @@ h5:hover {
 .card {
   background: transparent;
   border: solid white 3px;
-  width: 100px;
+  width: 110px;
   border-radius: 25px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   grid-gap: 30px;
-  padding-left: 5px;
-}
-
-.day-one {
-  margin-right: 15px;
+  font-size: 15px;
 }
 
 .day-one:hover {
   transform: scale(1.5);
 }
 
+.day-one {
+  margin-right: 7px;
+}
+
 .day-two:hover {
   transform: scale(1.5);
+}
+
+.day-two {
+  padding-left: 3px;
 }
 
 .day-three:hover {
@@ -103,6 +107,10 @@ h5:hover {
 
 .day-five:hover {
   transform: scale(1.5);
+}
+
+.day-five {
+  margin-left: 10px;
 }
 
 .btn {
