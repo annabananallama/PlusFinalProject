@@ -30,7 +30,23 @@ function formatDate() {
 }
 
 function getCurrentPosition() {
-  navigator.geolocation.getCurrentPosition(currentPosition);
+  navigator.geolocation.getCurrentPosition((position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+
+    let apiKey = "535cacbb3f8a0df0aeb4790235b9541f";
+    let currentWeatherApiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=${apiKey}`;
+    let forecastApiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=current,minutely,hourly&units=metric&appid=${apiKey}`;
+
+    axios
+      .all([axios.get(currentWeatherApiUrl), axios.get(forecastApiUrl)])
+      .then(
+        axios.spread((currentWeatherResponse, forecastResponse) => {
+          showTemperature(currentWeatherResponse);
+          displayForecast(forecastResponse);
+        })
+      );
+  });
 }
 
 function currentPosition(position) {
