@@ -70,47 +70,11 @@ h5:hover {
   transform: scale(1.5);
 }
 
-.card {
+.col-2 {
   background: transparent;
   border: solid white 3px;
-  width: 110px;
   border-radius: 25px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 30px;
   font-size: 15px;
-}
-
-.day-one:hover {
-  transform: scale(1.5);
-}
-
-.day-one {
-  margin-right: 7px;
-}
-
-.day-two:hover {
-  transform: scale(1.5);
-}
-
-.day-two {
-  padding-left: 3px;
-}
-
-.day-three:hover {
-  transform: scale(1.5);
-}
-
-.day-four:hover {
-  transform: scale(1.5);
-}
-
-.day-five:hover {
-  transform: scale(1.5);
-}
-
-.day-five {
-  margin-left: 10px;
 }
 
 .btn {
